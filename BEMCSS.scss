@@ -1,0 +1,193 @@
+/* Variables*/
+$primary-font-family:"Righteous";
+$secondary-font-family: "Berlin Sans FB";
+$card-backgnd-color: #424142;
+
+html, body {
+  margin: 0;
+  height: 100vh;
+}
+
+body{
+  display: flex;
+  place-content: center;
+  height: 100vh;
+  background-color: #2A282A;
+  margin: 5em 0em 5em 0em;
+}
+
+.card{
+  margin: 10px 10px 0px 0;
+  border: 1px solid #000;
+  width: 509px;
+  height: 729px;
+  background: $card-backgnd-color;
+  transition: all .2s ease-in-out; //prepare for the hover zoomin animation 
+ 
+  &:hover {
+      //animation: zoomin 1s;
+    //transform: scale(1.2,1.2);
+    transform: scale(1.1); //zoomin
+    }
+  &--adobeXD:hover {
+    /*Glow border*/
+    outline: none;
+    border: 2.5px solid;
+    border-color: #EED8E9;
+    box-shadow: 0 0 20px #EED8E9;
+  }
+    
+  &--invision:hover {
+      /*Glow border*/
+    outline: none;
+    border: 2.5px solid;
+    border-color: #F6D4DA;
+    box-shadow: 0 0 20px #F6D4DA;
+      }
+  &--sketch:hover {
+    /*Glow border*/
+    outline: none;
+    border: 2.5px solid;
+    border-color: #F7EAD5;
+    box-shadow: 0 0 20px #F7EAD5;
+     }
+  
+  &__imgBckgnd{
+    display: block;
+    background: black;
+    width: 466px;
+    height: 240px;
+    margin: 15px;
+  }
+  
+    &__img{
+      display: block;
+      width: 202px;
+      height: 198px;
+      background: black;
+      margin-top: -230px;
+      margin-left: 30%;
+      //padding: 20px; 
+      z-index: 2;
+    }
+    
+  &__title{
+    font-family: $primary-font-family;
+    font-weight: normal;
+    font-size: 50px;
+    text-align: center;
+    color: $card-backgnd-color;
+    border-radius: 10px;
+    padding: .5em .5em;
+    margin: 50px;
+    }
+  
+  &__title--AdobeXD{
+    background: #EED8E9;
+  }
+  &__title--Invision{
+    background: #F6D4DA;
+  }
+  &__title--Sketch{
+    background: #F7EAD5;
+  }
+
+
+  &__descr{
+    width: 432px;
+    height: 154px;
+    font-family: $secondary-font-family;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: left;
+    color: #d6d2d2;
+    padding: 20px;
+  }
+
+  &__link{
+    text-decoration: none;
+    padding: .5em 1em;
+    font-family: $secondary-font-family;
+    font-weight: normal;
+    font-size: 31px;
+    text-align: left;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: -20px;
+    margin-left: 5em;
+    
+    &:hover {
+      background: #267764;
+    }
+  }
+  &__link--AdobeXD{
+    background: #ff21bf;
+  }
+  &__link--Invision{
+    background: #FF3265;
+  }
+   &__link--Sketch{
+    background: #FDAD00;
+  }
+}
+
+/*Animations*/
+.slideRight{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+   /* animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;*/
+  
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+  
+  &--adobeXD{
+    animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+   
+  }
+  &--invision{
+    animation-duration: 1.2s;	
+	-webkit-animation-duration: 1.2s;
+   
+  }
+   &--sketch{
+    animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+    
+  }
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-550%);
+	}
+	/*50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}	*/		
+	100% {
+		transform: translateX(0%);
+	}	
+}
+
+/*@keyframes zoomin {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform: scale(1.2,1.2);
+    }
+}*/
